@@ -60,12 +60,12 @@ def date():
                                 name = date['user']
                                 msg = "Hello Dear Friend {} \n \tWish You Many More Happy Returns Of The Day\n \tIam Wishing All Your Dreams Comes True \n\n Regards \n Raja".format(name)
                                 mobile = date['phone_number']
-                                response = sendPostRequest(URL, '8YGQS8946AB1KP8U2EWRHS7XC9XQHKIS', '06454GN4ROIA6QXH', 'stage',mobile, '', msg )
+                                response = sendPostRequest(URL, 'api_key', 'api_secure', 'stage',mobile, '', msg )
                                 #print(response.text) 
         
-        name = 'Raja'
-        mobile = 9372794833 
+        name = 'ur name'
+        mobile = 'ur number' 
         msg1 = "Hi Raja Today Birthday Guys are \n\t Names : {0}  \n\t Mobile Numbers : {1}".format(list(details.keys()),list(details.values()))
-        response = sendPostRequest(URL, '8YGQS8946AB1KP8U2EWRHS7XC9XQHKIS', '06454GN4ROIA6QXH', 'stage',mobile, '', msg1 )
+        response = sendPostRequest(URL, 'api_key', 'api_secure', 'stage',mobile, '', msg1 )
 
 # date()
