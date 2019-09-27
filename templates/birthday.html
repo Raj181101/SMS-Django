@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+
+    <title>Birthday</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center;color:red;margin-top: 5px">Birthday Notifications</h1>
+        <form method="POST">
+            <fieldset class="form-group">
+                <legend class="text-center text-success">Register Your Birth Details</legend><hr style="background: rgb(42, 74, 117);width:25%;">
+                <p class="mt-4 text-center">
+                    {% if messages %}
+                      {% for message in messages %}
+                        <span class="alert alert-{{ message.tags }}">
+                          {{ message }}
+                        </span>
+                      {% endfor %}
+                    {% endif %}
+                </p>
+                {{ form|crispy}}
+                {% csrf_token %}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info"type="submit">Wish</button>
+            </div>
+    </div>
+</body>
+</html>
